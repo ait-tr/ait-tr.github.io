@@ -95,7 +95,7 @@
         function(item) {queryDict[item.split("=")[0]] = item.split("=")[1]}
     );
 
-    const converter = new showdown.Converter();
+    const converter = new showdown.Converter({tables: true});
 
     let baseUrl;
     fetch(queryDict.file)
